@@ -33,33 +33,32 @@ $products = Database::getAll();
 
       <div class="uk-grid">
          <section class="uk-width-1-5">
-            <h4>Categoriën</h4>
+            <h4>Categories</h4>
             <hr class="uk-divider" />
             <div>
                <input class="uk-checkbox" id="chickens" type="checkbox" name="chickens" />
-               <label for="chickens">Wedstrijd kippen</label>
+               <label for="chickens">-----</label>
             </div>
             <div>
                <input class="uk-checkbox" id="paint" type="checkbox" name="paint" />
-               <label for="paint">Verf</label>
+               <label for="paint">-----</label>
             </div>
             <div>
                <input class="uk-checkbox" id="machines" type="checkbox" name="machines" />
-               <label for="machines">Broedmachines</label>
+               <label for="machines">-----</label>
             </div>
             <div>
                <input class="uk-checkbox" id="hokken" type="checkbox" name="hokken" />
-               <label for="hokken">Hokken</label>
+               <label for="hokken">-----</label>
             </div>
          </section>
          <section class="uk-width-4-5">
-            <h4 class="uk-text-muted uk-text-small">Gekozen categorieën: <span class="uk-text-small uk-text-primary">Alle</span></h4>
             <div class="uk-flex uk-flex-home uk-flex-wrap">
                <?php foreach ($products as $product) : ?>
                   <!-- PRODUCT KAART 1 -->
                   <a class="product-card uk-card uk-card-home uk-card-default uk-card-small uk-card-hover" href="product.php?product_id=<?= $product->id ?>">
                      <div class="uk-card-media-top uk-align-center">
-                        <img src="<?= $product->image ?>" alt="Witte kip" class="product-image uk-align-center">
+                        <img src="<?= $product->image ?>" class="product-image uk-align-center">
                      </div>
                      <div class="uk-card-body uk-card-body-home">
                         <p class="product-card-p"><?= substr($product->description, 0, 89) . '...' ?></p>

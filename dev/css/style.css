@@ -11,6 +11,10 @@ div[uk-navbar] a {
    font-weight: 800;
 }
 
+h4 {
+   font-family: "VT323", monospace;
+}
+
 .logo {
    height: 40px;
 }
