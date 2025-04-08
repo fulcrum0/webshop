@@ -1,6 +1,10 @@
 * {
   font-family: "VT323", monospace;
 }
+
+div[uk-navbar] a {
+  font-family: "Press Start 2P", system-ui;
+}
 .logo {
   height: 40px;
 }
