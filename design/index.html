@@ -36,18 +36,18 @@
             <div class="uk-navbar-right">
 
                <ul class="uk-navbar-nav">
-                  <li class="uk-active"><a href="index.html"><img src="img/home.svg">Home</a></li>
-                  <li><a href="login.html"><img src="img/log in.svg">Login</a></li>
-                  <li><a href="register.html"><img src="img/register.svg">Register</a></li>
+                  <li class="uk-active"><a href="index.html"><span uk-icon="icon: home"></span>Home</a></li>
+                  <li><a href="login.html"><span uk-icon="icon: sign-in"></span>Log In</a></li>
+                  <li><a href="register.html"><span uk-icon="icon: file-edit"></span>Register</a></li>
                   <li>
                      <a href="cart.html">
-                        <img src="img/cart.svg">
+                        <span uk-icon="icon: cart"></span>
                         Cart
                         <span id="cart_amount_indicator" class="uk-badge">0</span>
                      </a>
                   </li>
                   <li>
-                     <a href="#"><img src="img/User.svg">Welkom Johan <span uk-navbar-parent-icon></span></a>
+                     <a href="#"><span uk-icon="icon: user"></span>Welkom Johan <span uk-navbar-parent-icon></span></a>
                      <div class="uk-navbar-dropdown">
                         <ul class="uk-nav uk-navbar-dropdown-nav">
                            <li class="uk-nav-header">Your informations</li>
@@ -55,7 +55,7 @@
                            <li><a href="#"><span uk-icon="icon: bag"></span>Orders</a></li>
                            <li><a href="#"><span uk-icon="icon: credit-card"></span>Invoices</a></li>
                            <li><a href="#"><span uk-icon="icon: refresh"></span>Returns</a></li>
-                           <li><a href="#"><span uk-icon="icon: heart"></span>Wishlist</a></li>
+                           <li><a href="#"><span uk-icon="icon: heart"></span>Wish list</a></li>
                            <li class="uk-nav-header">Contact</li>
                            <li><a href="#"><span uk-icon="icon: info"></span>Customer service</a></li>
                            <li class="uk-nav-divider"></li>
@@ -77,47 +77,48 @@
       </div>
       <div class="uk-grid">
          <section class="uk-width-1-5">
-            <h4>Categoriën</h4>
+            <h4>Categories</h4>
             <hr class="uk-divider" />
             <div>
                <input class="uk-checkbox" id="chickens" type="checkbox" name="chickens" />
-               <label for="chickens">Wedstrijd kippen</label>
+               <label for="chickens">-----</label>
             </div>
             <div>
                <input class="uk-checkbox" id="paint" type="checkbox" name="paint" />
-               <label for="paint">Verf</label>
+               <label for="paint">-----</label>
             </div>
             <div>
                <input class="uk-checkbox" id="machines" type="checkbox" name="machines" />
-               <label for="machines">Broedmachines</label>
+               <label for="machines">-----</label>
             </div>
             <div>
                <input class="uk-checkbox" id="hokken" type="checkbox" name="hokken" />
-               <label for="hokken">Hokken</label>
+               <label for="hokken">-----</label>
             </div>
          </section>
          <section class="uk-width-4-5">
-            <h4 class="uk-text-muted uk-text-small">Gekozen categorieën: <span
-                  class="uk-text-small uk-text-primary">Alle</span></h4>
+            <!-- <h4 class="uk-text-muted uk-text-small">Gekozen categorieën: <span
+                  class="uk-text-small uk-text-primary">Alle</span></h4> -->
             <div class="uk-flex uk-flex-home uk-flex-wrap">
                <!-- PRODUCT KAART 1 -->
                <a class="product-card uk-card uk-card-home uk-card-default uk-card-small uk-card-hover"
                   href="product.html">
                   <div class="uk-card-media-top uk-align-center">
-                     <img src="img/white-chicken.jpg" alt="Witte kip" class="product-image uk-align-center">
+                     <img src="img/red.png" class="product-image uk-align-center">
                   </div>
                   <div class="uk-card-body uk-card-body-home">
-                     <p class="product-card-p">Een ideale kip voor beginnende wedstrijd deelnemer.</p>
-                     <p class="product-card-p uk-text-large uk-text-bold uk-text-danger uk-text-right">&euro; 19.95</p>
+                     <p class="product-card-p">Carpentry Book</p>
+                     <p class="product-card-p uk-text-large uk-text-bold uk-text-danger uk-text-right">&euro; 14.95</p>
                   </div>
                </a>
                <!-- EINDE PRODUCT KAART 1 -->
-               <a class="product-card uk-card uk-card-home uk-card-default uk-card-small uk-card-hover" href="/">
+               <a class="product-card uk-card uk-card-home uk-card-default uk-card-small uk-card-hover" href="product.html">
                   <div class="uk-card-media-top uk-align-center">
-                     <img src="img/brown-chicken.jpg" alt="Witte kip" class="product-image uk-align-center">
+                     <img src="img/brown.png" alt="Witte kip" class="product-image uk-align-center">
                   </div>
                   <div class="uk-card-body uk-card-body-home">
-                     <p class="product-card-p">Een kip voor de gevorderde wedstrijd deelnemer.</p>
+                     <p class="product-card-p">Medial Book <br>
+                     Includes tons of information about first aid.</p>
                      <p class="product-card-p uk-text-large uk-text-bold uk-text-danger uk-text-right">&euro; 29.95</p>
                   </div>
                </a>
@@ -190,7 +191,6 @@
          </section>
       </div>
    </main>
-
    <script src="js/uikit.min.js"></script>
    <script src="js/uikit-icons.min.js"></script>
 </body>

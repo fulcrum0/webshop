@@ -27,6 +27,8 @@ div[uk-navbar] a {
 
 .product-card,
 .product-card-p {
+  text-align: center;
+  font-size: 22px;
   text-decoration: none !important;
   color: #666;
 }
