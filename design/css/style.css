@@ -5,8 +5,13 @@
 div[uk-navbar] a {
   font-family: "Press Start 2P", system-ui;
 }
+
 .logo {
   height: 40px;
+}
+.uk-navbar-nav img {
+  height: 25px;
+  margin-right: 3px;
 }
 
 .product-image {
