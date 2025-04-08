@@ -1,5 +1,23 @@
+* {
+   font-family: "VT323", monospace;
+}
+
+div[uk-navbar] a {
+   font-family: "Press Start 2P", system-ui;
+}
+
+.uk-nav-header {
+   font-size: 20px;
+   font-weight: 800;
+}
+
 .logo {
    height: 40px;
+}
+
+.uk-navbar-nav img {
+   height: 25px;
+   margin-right: 3px;
 }
 
 .product-image {
@@ -7,24 +25,28 @@
    height: 206px;
 }
 
-.product-card, .product-card-p {
+.product-card,
+.product-card-p {
    text-decoration: none !important;
    color: #666;
 }
 
-.uk-card-home, .uk-card-body-home {
+.uk-card-home,
+.uk-card-body-home {
    width: 300px;
 }
 
-.uk-card-body-home > p {
+.uk-card-body-home>p {
    max-width: 250px;
 }
 
-.uk-card-body-home > p:first-child {
+.uk-card-body-home>p:first-child {
    min-height: 72px;
 }
 
-.uk-flex-home, .uk-cart-gap, .uk-card-body-gap {
+.uk-flex-home,
+.uk-cart-gap,
+.uk-card-body-gap {
    gap: 1rem;
 }
 
@@ -34,7 +56,7 @@
 }
 
 .uk-text-xsmall {
-   font-size: .5rem;
+   font-size: 0.5rem;
    line-height: 1.5;
 }
 
@@ -66,9 +88,9 @@
 
 .uk-order-confirm-img {
    width: 30px !important;
-
 }
 
-.order-confirm-table tbody tr:last-child, tfoot tr:nth-child(2) {
+.order-confirm-table tbody tr:last-child,
+tfoot tr:nth-child(2) {
    border-bottom: 3px solid #e5e5e5 !important;
 }

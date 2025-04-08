@@ -19,7 +19,7 @@
    <link rel="icon" href="img/book.png">
    <link rel="manifest" href="img/site.webmanifest">
    <link rel="stylesheet" href="css/uikit.min.css">
-   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/style.css?v=1.0.1">
 
 </head>
 
@@ -42,10 +42,10 @@
             <div class="uk-navbar-right">
 
                <ul class="uk-navbar-nav">
-                  <li class="uk-active"><a href="/"><span uk-icon="icon: home"></span>Home</a></li>
+                  <li class="uk-active"><a href="index.php"><img src="img/home.svg">Home</a></li>
                   <?php if (guest()) : ?>
-                     <li><a href="login.php"><span uk-icon="icon: sign-in"></span>Log In</a></li>
-                     <li><a href="register.php"><span uk-icon="icon: file-edit"></span>Register</a></li>
+                     <li><a href="login.php"><img src="img/log in.svg">Login</a></li>
+                     <li><a href="register.php"><img src="img/register.svg">Register</a></li>
                   <?php endif; ?>
                   <?php if (isLoggedIn()) : ?>
                      <li>
@@ -64,7 +64,7 @@
                               <li><a href="orderlist.php"><span uk-icon="icon: bag"></span>Orders</a></li>
                               <li><a href="invoicelist.php"><span uk-icon="icon: credit-card"></span>Invoices</a></li>
                               <li><a href="returnlist.php"><span uk-icon="icon: refresh"></span>Return</a></li>
-                              <li><a href="favorites.php"><span uk-icon="icon: heart"></span>Wish List</a></li>
+                              <li><a href="favorites.php"><span uk-icon="icon: heart"></span>Wishlist</a></li>
                               <li class="uk-nav-header">Contact</li>
                               <li><a href="customerservice.php"><span uk-icon="icon: info"></span>Customer Service</a></li>
                               <li class="uk-nav-divider"></li>
