@@ -4,7 +4,7 @@
 class Database
 {
    private static $dbHost = "db";
-   private static $dbName = "webshop";
+   private static $dbName = "lv_bookstore";
    private static $dbUser = "root";
    private static $dbPassword = "root";
 
@@ -33,13 +33,13 @@ class Database
 
    public static function setup(string $dbname, string $user, string $password): void
    {
-      if(! is_null($dbname) && ! empty($dbname))
+      if (! is_null($dbname) && ! empty($dbname))
          self::$dbName = $dbname;
 
-      if(! is_null($user) && ! empty($user))
+      if (! is_null($user) && ! empty($user))
          self::$dbUser = $user;
 
-      if(! is_null($password) && ! empty($password))
+      if (! is_null($password) && ! empty($password))
          self::$dbPassword = $password;
    }
 

@@ -62,8 +62,8 @@ $order_total = $cart_total_cost + $shipping_cost;
                         <?= substr($cart_item->description, 0, 120) . '...' ?>
                      </p>
                      <div class="uk-flex uk-flex-between">
-                        <p class="uk-text-primary uk-text-bold">Prijs per stuk: &euro; <?= sprintf("%.2f", $cart_item->price) ?></p>
-                        <p class="uk-text-primary uk-text-bold uk-margin-remove-top">Totaal: &euro; <?= sprintf("%.2f", $cart_item->product_total) ?></p>
+                        <p class="uk-text-primary uk-text-bold" id="prijsPerStuk">Prijs per stuk: &euro; <?= sprintf("%.2f", $cart_item->price) ?></p>
+                        <p class="uk-text-primary uk-text-bold uk-margin-remove-top" id="productTotal">Totaal: &euro;<?= sprintf("%.2f", $cart_item->product_total) ?></p>
                      </div>
                   </div>
                   <div class="uk-width-1-4 uk-flex uk-flex-between uk-flex-middle uk-flex-center">
@@ -73,7 +73,8 @@ $order_total = $cart_total_cost + $shipping_cost;
                            <input type="hidden" value="<?= $cart_item->product_id ?>" name="product_id" />
                            <input type="hidden" id="new-amount-<?= $cart_item->product_id ?>" name="amount" />
                         </form>
-                        <input id="amount-<?= $cart_item->product_id ?>" class="uk-form-controls uk-form-width-xsmall uk-text-medium" name="amount" value="<?= $cart_item->amount ?>" type="number" onchange="changeAmount(<?= $cart_item->product_id ?>)" />
+                        <input id="amount-<?= $cart_item->product_id ?>" class="uk-form-controls uk-form-width-xsmall uk-text-medium" name="amount"
+                        id="amount" value="<?= $cart_item->amount ?>" type="number" onchange="changeAmount(<?= $cart_item->product_id ?>)" min="0" />
                      </div>
                      <div class="uk-width-1-4">
                         <a href="#" class="uk-link-cart-trash uk-flex uk-flex-column uk-flex-middle uk-text-danger uk-flex-1">
@@ -134,6 +135,6 @@ $order_total = $cart_total_cost + $shipping_cost;
    </section>
 </div>
 
-
+<script src="js/script.js"></script>
 <?php
 @include_once(__DIR__ . '/template/foot.inc.php');
