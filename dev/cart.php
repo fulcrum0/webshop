@@ -62,8 +62,8 @@ $order_total = $cart_total_cost + $shipping_cost;
                         <?= substr($cart_item->description, 0, 120) . '...' ?>
                      </p>
                      <div class="uk-flex uk-flex-between">
-                        <p class="uk-text-primary uk-text-bold" id="prijsPerStuk">Prijs per stuk: &euro; <?= sprintf("%.2f", $cart_item->price) ?></p>
-                        <p class="uk-text-primary uk-text-bold uk-margin-remove-top" id="productTotal">Totaal: &euro;<?= sprintf("%.2f", $cart_item->product_total) ?></p>
+                        <p class="uk-text-primary uk-text-bold" id="prijsPerStuk-<?= $cart_item->product_id ?>">Prijs per stuk: &euro; <?= sprintf("%.2f", $cart_item->price) ?></p>
+                        <p class="uk-text-primary uk-text-bold uk-margin-remove-top" id="productTotal-<?= $cart_item->product_id ?>">Totaal: &euro;<?= sprintf("%.2f", $cart_item->product_total) ?></p>
                      </div>
                   </div>
                   <div class="uk-width-1-4 uk-flex uk-flex-between uk-flex-middle uk-flex-center">
@@ -74,7 +74,8 @@ $order_total = $cart_total_cost + $shipping_cost;
                            <input type="hidden" id="new-amount-<?= $cart_item->product_id ?>" name="amount" />
                         </form>
                         <input id="amount-<?= $cart_item->product_id ?>" class="uk-form-controls uk-form-width-xsmall uk-text-medium" name="amount"
-                        id="amount" value="<?= $cart_item->amount ?>" type="number" onchange="changeAmount(<?= $cart_item->product_id ?>)" min="0" />
+                           value="<?= $cart_item->amount ?>" type="number"
+                           onchange="changeAmount(<?= $cart_item->product_id ?>)" oninput="calculateTotal(this)" min="0" />
                      </div>
                      <div class="uk-width-1-4">
                         <a href="#" class="uk-link-cart-trash uk-flex uk-flex-column uk-flex-middle uk-text-danger uk-flex-1">
@@ -121,7 +122,7 @@ $order_total = $cart_total_cost + $shipping_cost;
          <div class="uk-card-footer">
             <div class="uk-flex uk-flex-between uk-flex-middle">
                <p class="uk-width-1-2 uk-text-bold">Te betalen</p>
-               <p class="uk-width-1-2 uk-margin-remove-top uk-text-right uk-text-bold">
+               <p id="allTotal" class="uk-width-1-2 uk-margin-remove-top uk-text-right uk-text-bold">
                   &euro; <?= sprintf("%.2f", $order_total) ?>
                </p>
             </div>
@@ -134,6 +135,7 @@ $order_total = $cart_total_cost + $shipping_cost;
       </div>
    </section>
 </div>
+
 
 <script src="js/script.js"></script>
 <?php
